@@ -7,22 +7,75 @@ const { NETWORK } = require(`${basePath}/constants/network.js`);
 const network = NETWORK.eth;
 
 // General metadata for Ethereum
-const namePrefix = "YOUR COLLECTION NAME";
-const description = "Remember to replace this description";
+const namePrefix = "WE.xyz";
+const description = "This is a project for Women Empowerment (WE). Together, WE can be the change.";
 const baseUri = "ipfs://NewUriToReplace"; // This will be replaced automatically
 
 // If you have selected Solana then the collection starts from 0 automatically
 const layerConfigurations = [
   {
-    growEditionSizeTo: 5,
+    growEditionSizeTo: 2,
     layersOrder: [
-      { name: "Background" },
-      { name: "Eyeball" },
-      { name: "Eye color" },
-      { name: "Iris" },
-      { name: "Shine" },
-      { name: "Bottom lid" },
-      { name: "Top lid" },
+      { name: "Background fire" },
+      { name: "Skin fire" },
+      { name: "Eye fire" },
+      { name: "Lips" },
+      { name: "Face" },
+      { name: "Hair fire" },
+      { name: "Nail fire" },
+      { name: "Element fire" },
+    ],
+  },
+  {
+    growEditionSizeTo: 3,
+    layersOrder: [
+      { name: "Background leaf" },
+      { name: "Skin leaf" },
+      { name: "Eye leaf" },
+      { name: "Lips" },
+      { name: "Face" },
+      { name: "Hair leaf" },
+      { name: "Nail leaf" },
+      { name: "Element leaf" },
+    ],
+  },
+  {
+    growEditionSizeTo: 4,
+    layersOrder: [
+      { name: "Background rose" },
+      { name: "Skin rose" },
+      { name: "Eye rose" },
+      { name: "Lips" },
+      { name: "Face" },
+      { name: "Hair rose" },
+      { name: "Nail rose" },
+      { name: "Element rose" },
+    ],
+  },
+  {
+    growEditionSizeTo: 64,
+    layersOrder: [
+      { name: "Background 1" },
+      { name: "Skin" },
+      { name: "Eye" },
+      { name: "Lips" },
+      { name: "Face" },
+      { name: "Hair 1" },
+      { name: "Nail" },
+      { name: "Element 1" },
+    ],
+  },
+  {
+    growEditionSizeTo: 99,
+    layersOrder: [
+      { name: "Background 2" },
+      { name: "Skin" },
+      { name: "Eye" },
+      { name: "Lips" },
+      { name: "Face" },
+      { name: "Hair 2" },
+      { name: "Nail" },
+      { name: "Element 2" },
     ],
   },
 ];
@@ -32,13 +85,13 @@ const shuffleLayerConfigurations = true;
 const debugLogs = false;
 
 const format = {
-  width: 512,
-  height: 512,
+  width: 1000,
+  height: 1000,
   smoothing: false,
 };
 
 const extraMetadata = {
-  external_url: "https://codecats.xyz", // Replace with your website or remove this line if you do not have one.
+  external_url: "https://WE.xyz", // Replace with your website or remove this line if you do not have one.
 };
 
 // NFTPort Info
@@ -49,22 +102,22 @@ const LIMIT = 2; // Your API key rate limit
 const CHAIN = 'rinkeby'; // only rinkeby or polygon
 
 // REQUIRED CONTRACT DETAILS THAT CANNOT BE UPDATED LATER!
-const CONTRACT_NAME = 'CRYPTOPUNKS';
-const CONTRACT_SYMBOL = 'CP';
+const CONTRACT_NAME = 'WE.xyz';
+const CONTRACT_SYMBOL = 'WE';
 const METADATA_UPDATABLE = true; // set to false if you don't want to allow metadata updates after minting
-const OWNER_ADDRESS = 'YOUR WALLET ADDRESS HERE';
-const TREASURY_ADDRESS = 'YOUR WALLET ADDRESS HERE';
+const OWNER_ADDRESS = '0xECf7b7f46C6be9BBa2f3C93b212D01316b135Df1';
+const TREASURY_ADDRESS = '0xECf7b7f46C6be9BBa2f3C93b212D01316b135Df1';
 const MAX_SUPPLY = 5000; // The maximum number of NFTs that can be minted. CANNOT BE UPDATED!
-const MINT_PRICE = 1; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
-const TOKENS_PER_MINT = 10; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
+const MINT_PRICE = 0.001; // Minting price per NFT. Rinkeby = ETH, Polygon = MATIC. CANNOT BE UPDATED!
+const TOKENS_PER_MINT = 2; // maximum number of NFTs a user can mint in a single transaction. CANNOT BE UPDATED!
 
 // REQUIRED CONTRACT DETAILS THAT CAN BE UPDATED LATER.
-const PUBLIC_MINT_START_DATE = "2022-03-20T11:30:48+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
+const PUBLIC_MINT_START_DATE = "2022-05-22T11:00:00+00:00"; // This is required. Eg: 2022-02-08T11:30:48+00:00
 
 // OPTIONAL CONTRACT DETAILS THAT CAN BE UPDATED LATER.
 const PRESALE_MINT_START_DATE = null; // Optional. Eg: 2022-02-08T11:30:48+00:00
-const ROYALTY_SHARE = 1000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
-const ROYALTY_ADDRESS = "0xd8B808A887326F45B2D0cd999709Aa6264CeF919"; // Address that will receive the royalty
+const ROYALTY_SHARE = 4000; // Percentage of the token price that goes to the royalty address. 100 bps = 1%
+const ROYALTY_ADDRESS = "0xECf7b7f46C6be9BBa2f3C93b212D01316b135Df1"; // Address that will receive the royalty
 const BASE_URI = null; // only update if you want to manually set the base uri
 const PREREVEAL_TOKEN_URI = null; // only update if you want to manually set the prereveal token uri
 const PRESALE_WHITELISTED_ADDRESSES = []; // only update if you want to manually set the whitelisted addresses
@@ -75,8 +128,8 @@ let CONTRACT_ADDRESS = "YOUR CONTRACT ADDRESS"; // If you want to manually inclu
 // Generic Metadata is optional if you want to reveal your NFTs
 const GENERIC = true; // Set to true if you want to upload generic metas and reveal the real NFTs in the future
 const GENERIC_TITLE = CONTRACT_NAME; // Replace with what you want the generic titles to say if you want it to be different from the contract name.
-const GENERIC_DESCRIPTION = "REPLACE THIS"; // Replace with what you want the generic descriptions to say.
-const GENERIC_IMAGE = "https://ipfs.io/ipfs/QmUf9tDbkqnfHkQaMdFWSGAeXwVXWA61pFED7ypx4hcsfh"; // Replace with your generic image that will display for all NFTs pre-reveal.
+const GENERIC_DESCRIPTION = "What is your super power?"; // Replace with what you want the generic descriptions to say.
+const GENERIC_IMAGE = "https://ipfs.io/ipfs/bafybeihw3aufnuredx7g63jmyebaasxvycppjpqc6ads6ofwqtgudovsd4"; // Replace with your generic image that will display for all NFTs pre-reveal.
 
 // Automatically set contract address if deployed using the deployContract.js script
 try {
