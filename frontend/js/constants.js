@@ -1,7 +1,7 @@
 const contractAddress = "0x0f911ed5E881Ffacf6a065aa7bAbE2B7c26134f9"; //Replace with your own contract address
 const chain = 'rinkeby'; // rinkeby or polygon
 
-const welcome_h1 = "Welcome to the VE Vision NFT Project!!";
+const welcome_h1 = "Welcome to the WE Vision NFT Project!!";
 const welcome_h2 = "Connect to MetaMask to Get Started";
 const welcome_p = 'The WE Vision NFT Project is a decentralized, open-source project that aims to empower all women around the world. Together, WE can be the change.';
 const h1_presale_coming_soon = "NFT Drop Coming Soon!!";
