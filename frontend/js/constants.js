@@ -1,4 +1,4 @@
-const contractAddress = "0xdCA68b706745A944Cc5dD049cCa9768AB256E63A"; //Replace with your own contract address
+const contractAddress = "0x10914f659b6F4d688855D08d33d61C76D70F9454";//Address of the previous polygon contract: "0xdCA68b706745A944Cc5dD049cCa9768AB256E63A"; //Replace with your own contract address
 const chain = 'polygon'; // rinkeby or polygon
 
 const welcome_h1 = "Welcome to the WE Vision NFT Project!!";
